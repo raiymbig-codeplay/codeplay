@@ -18,7 +18,7 @@ export default function TrueFalseQuiz({ questions, language }) {
   useEffect(() => {
     const checkCompletion = async () => {
       const token = await currentUser.getIdToken(true);
-      const res = await fetch(`/api/progress/${currentUser.uid}`, {
+      const res = await fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -47,7 +47,7 @@ export default function TrueFalseQuiz({ questions, language }) {
       setCorrectCount(c => c + 1);
       toast.success(`Правильно! +${q.xp} XP`, { autoClose: 1500, hideProgressBar: true });
       const token = await currentUser.getIdToken(true);
-      await fetch('/api/progress/complete', {
+      await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export default function TrueFalseQuiz({ questions, language }) {
 
   const saveFullTestProgress = async () => {
     const token = await currentUser.getIdToken(true);
-    await fetch('/api/progress/complete', {
+    await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

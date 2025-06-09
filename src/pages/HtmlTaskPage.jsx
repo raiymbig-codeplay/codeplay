@@ -31,10 +31,10 @@ export default function HtmlTaskPage() {
     currentUser.getIdToken(true)
       .then(token => {
         return Promise.all([
-          fetch('/api/users/profile', {
+          fetch('https://codeplay-v8ci.onrender.com/api/users/profile', {
             headers: { Authorization: `Bearer ${token}` }
           }).then(res => res.json()),
-          fetch(`/api/progress/${currentUser.uid}`, {
+          fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
             headers: { Authorization: `Bearer ${token}` }
           }).then(res => res.json())
         ]);
@@ -75,7 +75,7 @@ export default function HtmlTaskPage() {
     if (currentUser) {
       try {
         const token = await currentUser.getIdToken(true);
-        await fetch('/api/progress/complete', {
+        await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ export default function HtmlTaskPage() {
           })
         });
 
-        const res = await fetch(`/api/progress/${currentUser.uid}`, {
+        const res = await fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();

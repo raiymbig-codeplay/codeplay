@@ -21,10 +21,10 @@ export default function LeaderboardPage() {
       const token = await currentUser.getIdToken(true);
 
       const [profileRes, usersRes] = await Promise.all([
-        fetch("/api/users/profile", {
+        fetch("https://codeplay-v8ci.onrender.com/api/users/profile", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch("/api/users/all", {
+        fetch("https://codeplay-v8ci.onrender.com/api/users/all", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);

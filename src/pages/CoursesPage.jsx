@@ -53,7 +53,7 @@ export default function CoursesPage() {
 
     currentUser.getIdToken(true)
       .then(token =>
-        fetch("/api/users/profile", {
+        fetch("https://codeplay-v8ci.onrender.com/api/users/profile", {
           headers: { Authorization: `Bearer ${token}` },
         })
       )

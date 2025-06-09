@@ -42,7 +42,7 @@ export default function HtmlSubtopicPage() {
     }
 
     currentUser.getIdToken(true)
-      .then((token) => fetch(`/api/progress/${currentUser.uid}`, {
+      .then((token) => fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
         headers: { Authorization: `Bearer ${token}` }
       }))
       .then((res) => res.json())
@@ -80,7 +80,7 @@ export default function HtmlSubtopicPage() {
     if (currentUser) {
       try {
         const token = await currentUser.getIdToken(true);
-        await fetch('/api/progress/complete', {
+        await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ export default function HtmlSubtopicPage() {
           })
         });
 
-        const res = await fetch(`/api/progress/${currentUser.uid}`, {
+        const res = await fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();

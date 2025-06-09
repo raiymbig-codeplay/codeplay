@@ -69,7 +69,7 @@ export default function ChallengesPage() {
     if (!currentUser) return navigate("/auth");
     currentUser.getIdToken(true)
       .then((token) =>
-        fetch("/api/users/profile", {
+        fetch("https://codeplay-v8ci.onrender.com/api/users/profile", {
           headers: { Authorization: `Bearer ${token}` },
         })
       )
@@ -89,7 +89,7 @@ export default function ChallengesPage() {
     if (!currentUser) return;
     currentUser.getIdToken(true)
       .then((token) =>
-        fetch(`/api/progress/${currentUser.uid}`, {
+        fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
       )

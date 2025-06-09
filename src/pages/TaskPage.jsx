@@ -36,7 +36,7 @@ export default function TaskPage() {
     if (!currentUser) return;
     currentUser.getIdToken(true)
       .then(token =>
-        fetch(`/api/progress/${currentUser.uid}`, {
+        fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
           headers: { Authorization: `Bearer ${token}` }
         })
       )
@@ -62,7 +62,7 @@ export default function TaskPage() {
   const handleRun = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/execute', {
+      const res = await fetch('https://codeplay-v8ci.onrender.com/api/execute', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -80,7 +80,7 @@ export default function TaskPage() {
 
       if (passed) {
         const token = await currentUser.getIdToken(true);
-        const saveRes = await fetch('/api/progress/complete', {
+        const saveRes = await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ export default function TaskPage() {
 
         addXp(task.xp || 10);
 
-        const progRes = await fetch(`/api/progress/${currentUser.uid}`, {
+        const progRes = await fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (progRes.ok) {

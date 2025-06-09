@@ -21,7 +21,7 @@ export default function OutputGuessQuiz({ questions, language }) {
     const checkCompletion = async () => {
       try {
         const token = await currentUser.getIdToken(true);
-        const res = await fetch(`/api/progress/${currentUser.uid}`, {
+        const res = await fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
@@ -55,7 +55,7 @@ export default function OutputGuessQuiz({ questions, language }) {
       toast.success(`+${questions[idx].xp} XP`, { autoClose: 1000, hideProgressBar: true });
       try {
         const token = await currentUser.getIdToken(true);
-        await fetch('/api/progress/complete', {
+        await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export default function OutputGuessQuiz({ questions, language }) {
   const saveFullTestProgress = async () => {
     try {
       const token = await currentUser.getIdToken(true);
-      await fetch('/api/progress/complete', {
+      await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

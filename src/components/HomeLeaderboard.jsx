@@ -17,7 +17,7 @@ export default function HomeLeaderboard() {
     (async () => {
       try {
         const token = await currentUser.getIdToken(true);
-        const res = await fetch("/api/users/all", {
+        const res = await fetch("https://codeplay-v8ci.onrender.com/api/users/all", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();

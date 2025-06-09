@@ -105,7 +105,7 @@ export default function SubtopicPage() {
     setLoading(true);
     try {
       const token = await currentUser.getIdToken(true);
-      const execRes = await fetch('/api/execute', {
+      const execRes = await fetch('https://codeplay-v8ci.onrender.com/api/execute', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, language: course.language, input: task.input || '' })
@@ -119,7 +119,7 @@ export default function SubtopicPage() {
         : false;
 
       if (passed) {
-        await fetch('/api/progress/complete', {
+        await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -33,7 +33,7 @@ export default function CodePuzzlePage() {
   useEffect(() => {
     if (!currentUser) return;
     currentUser.getIdToken(true)
-      .then(token => fetch(`/api/progress/${currentUser.uid}`, {
+      .then(token => fetch(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
         headers: { Authorization: `Bearer ${token}` }
       }))
       .then(res => res.json())
@@ -49,7 +49,7 @@ export default function CodePuzzlePage() {
     if (!isCorrect) return;
 
     const token = await currentUser.getIdToken(true);
-    await fetch('/api/progress/complete', {
+    await fetch('https://codeplay-v8ci.onrender.com/api/progress/complete', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
