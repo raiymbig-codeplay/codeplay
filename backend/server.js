@@ -18,16 +18,7 @@ dotenv.config();
   await connectDB();
 
   const app = express();
-  app.use(
-    cors({
-      origin: [
-        'https://codeplay-ph9bw899g-raiymbig123123s-projects.vercel.app',
-        'https://codeplay-v8ci.onrender.com'   
-      ],
-      methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
-      allowedHeaders: ['Content-Type','Authorization']
-    })
-  );
+  app.use(cors());
   app.use(express.json());
 
   // === API для выполнения кода (оставляем как было) ===
