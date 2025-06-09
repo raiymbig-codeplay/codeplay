@@ -1,10 +1,8 @@
-// backend/config/firebase.js
 import admin from "firebase-admin";
 
-// Получаем JSON как строку из переменной окружения
-const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
+const decodedJson = Buffer.from(process.env.FIREBASE_KEY_BASE64, "base64").toString("utf-8");
+const serviceAccount = JSON.parse(decodedJson);
 
-// Инициализация Firebase Admin SDK
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
