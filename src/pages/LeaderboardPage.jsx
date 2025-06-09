@@ -66,17 +66,17 @@ export default function LeaderboardPage() {
             <div key={user.firebaseUid} className="leaderboard-row">
               <span className="rank-cell">
                 {index === 0 ? (
-                  <img src="/public/images/gold.png" alt="1st" className="medal-icon" />
+                  <img src="/images/gold.png" alt="1st" className="medal-icon" />
                 ) : index === 1 ? (
-                  <img src="/public/images/silver.png" alt="2nd" className="medal-icon" />
+                  <img src="/images/silver.png" alt="2nd" className="medal-icon" />
                 ) : index === 2 ? (
-                  <img src="/public/images/bronze.png" alt="3rd" className="medal-icon" />
+                  <img src="/images/bronze.png" alt="3rd" className="medal-icon" />
                 ) : (
                   index + 1
                 )}
               </span>
               <div className="user-info">
-                <img src={user.avatar || "/public/images/avatar.png"} alt="avatar" />
+                <img src={user.avatar || "/images/avatar.png"} alt="avatar" />
                 <span>{user.username || user.name}</span>
               </div>
               <span>{user.level}</span>

@@ -135,7 +135,7 @@ export default function TrueFalseQuiz({ questions, language }) {
       </div>
 
       <div className="quiz-header">
-        <img src="/public/images/question-icon.png" alt="?" className="quiz-icon" />
+        <img src="/images/question-icon.png" alt="?" className="quiz-icon" />
         <h2>True / False Quiz</h2>
         <p className="quiz-subtitle">{language.toUpperCase()}</p>
       </div>

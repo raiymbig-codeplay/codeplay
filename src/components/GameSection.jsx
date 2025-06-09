@@ -12,17 +12,17 @@ function GameSection() {
   const games = [
     {
       title: t("gameSection.puzzle"),
-      bg: "public/images/puzzle.png",
+      bg: "/images/puzzle.png",
       path: "/minigames/code-puzzle",
     },
     {
       title: t("gameSection.truefalse"),
-      bg: "public/images/truefalse.png",
+      bg: "/images/truefalse.png",
       path: "/minigames/true-false",
     },
     {
       title: t("gameSection.output"),
-      bg: "public/images/output.png",
+      bg: "/images/output.png",
       path: "/minigames/output-guess",
     },
   ];

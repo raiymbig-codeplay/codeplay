@@ -33,7 +33,7 @@ export default function EditableAvatar({ avatarUrl, onUpload }) {
 
   return (
     <div className="editable-avatar">
-      <img src={avatarUrl || '/public/images/avatar.png'} alt="avatar" className="editable-avatar-image" />
+      <img src={avatarUrl || '/images/avatar.png'} alt="avatar" className="editable-avatar-image" />
       <button type="button" className="edit-avatar-button" onClick={handleClick}>✏️</button>
       <input type="file" accept="image/*" ref={fileRef} onChange={handleChange} hidden />
     </div>

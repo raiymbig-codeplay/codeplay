@@ -19,7 +19,7 @@ export default function MiniProfileStats({ onAvatarClick }) {
   return (
     <div className="mini-profile">
       <img
-        src={profile.avatar || "/public/images/avatar.png"}
+        src={profile.avatar || "/images/avatar.png"}
         alt="avatar"
         className="mini-avatar clickable-avatar"
         onClick={onAvatarClick}
