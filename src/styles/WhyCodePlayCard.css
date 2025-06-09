@@ -1,0 +1,111 @@
+.advantages-card {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background-color: #131313;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    color: #2e2d31;
+  }
+  
+  .advantages-card-content::before {
+    content: '';
+    position: absolute;
+    top: -48px;
+    right: -48px;
+    width: 120px;
+    height: 120px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    transform: rotate(-175deg);
+    box-shadow: inset 60px 60px #f2f2f2;
+    z-index: 1;
+  }
+  
+  .advantages-temporary-text {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px 12px;
+    color: #f8f8f8;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .advantages-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .advantages-card-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: #ebeaea;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: translateY(0); 
+    transition: height 0.3s ease;
+    box-sizing: border-box;
+    z-index: 1;
+    height: 120px; 
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  .advantages-card:hover .advantages-card-content {
+    height: 100%; 
+  }
+  
+  .advantages-card-content::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    width: 0px;
+    height: 0px;
+    transform: rotate(-175deg);
+    border-radius: 90%;
+    box-shadow: inset 48px 48px #f2f2f2;
+  }
+  
+  .advantages-card-title {
+    color: #131313;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .advantages-card-subtitle {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .advantages-card-description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.3s ease;
+  }
+  
+  .advantages-card:hover .advantages-card-description {
+    opacity: 1;
+    max-height: 300px;
+    transition-delay: 0.25s;
+  }
+
+  .advantages-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  

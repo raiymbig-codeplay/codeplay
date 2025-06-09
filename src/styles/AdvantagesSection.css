@@ -1,0 +1,45 @@
+/* AdvantagesSection.css */
+
+.advantages-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .advantages-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .advantages-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .advantage-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .advantage-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .advantage-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .advantage-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  

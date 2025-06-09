@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rubik:wght@400;600;800&display=swap');
+
+.homepage-body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: #0d1b2a;
+  color: white;
+}
+
+.homepage-header {
+  height: 80px;
+  background-color: #0d1b2a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 139px;
+  border: 1px solid white;
+}
+
+.homepage-header .logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.homepage-header nav {
+  display: flex;
+  gap: 78px;
+  margin-left: 222px;
+  margin-right: auto;
+}
+
+.homepage-header nav a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.homepage-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.homepage-main {
+  padding: 145px 140px 0;
+}
+
+.homepage-main h1 {
+  font-family: 'Menlo,Roboto Mono',monospace;
+  font-weight: 800;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.homepage-card {
+  background-color: #0d1b2a;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.homepage-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.homepage-card p.description {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.homepage-course-list,
+.homepage-challenge-list,
+.homepage-game-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.homepage-course,
+.homepage-challenge,
+.homepage-game {
+  width: 229px;
+  height: 189px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.homepage-course img,
+.homepage-game img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homepage-course-details,
+.homepage-game-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 12px;
+  color: white;
+}
+
+.homepage-button-start {
+  background-color: #158626;
+  color: white;
+  border: none;
+  padding: 8px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.homepage-stats-card,
+.homepage-empty-card {
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #32323d33;
+  padding: 24px;
+  color: white;
+}
+
+.homepage-stats-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.homepage-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.homepage-profile-button {
+  width: 214px;
+  height: 33px;
+  background-color: #0d1b2a;
+  color: white;
+  font-weight: 800;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 20px auto 0;
+  display: block;
+  cursor: pointer;
+}
+
+/* сделаем таблицу уже и чуть поменьше шрифт */
+.homepage-leaderboard .leaderboard-page {
+  max-width: 300px;       /* например, вместо 600px по умолчанию */
+  max-height: 100px;
+  margin-top: 16px;       /* отступ от профиля */
+}
+
+.homepage-leaderboard .leaderboard-table {
+  font-size: 0.85rem;     /* чуть поменьше текст */
+}
+
+/* можно уточнить: заголовок h3 тоже подправить */
+.homepage-leaderboard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+

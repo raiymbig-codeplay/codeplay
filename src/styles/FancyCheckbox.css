@@ -1,0 +1,109 @@
+.check-wrapper {
+  position: relative;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.check-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.check-icon {
+  fill: none;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 18px;
+  height: 18px;
+  transition: stroke 0.2s ease;
+  z-index: 1;
+}
+
+.check-wrapper:hover .check-icon {
+  stroke: #4285f4;
+}
+
+.check-input:checked ~ .check-icon {
+  stroke: #4285f4;
+}
+
+.check-input:checked ~ .check-icon path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+.check-input:checked ~ .check-icon polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.fancy-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.fancy-checkbox input {
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-svg {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.checkbox-border {
+  fill: none;
+  stroke: #c8ccd4;
+  stroke-width: 0.5;
+  transition: stroke 0.2s ease;
+}
+
+.checkbox-tick {
+  fill: none;
+  stroke: #4285f4;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 22;
+  stroke-dashoffset: 22;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.checkbox-svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 22;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.fancy-checkbox input:checked + .checkbox-svg .checkbox-tick {
+  stroke-dashoffset: 0;
+}
+
+.fancy-checkbox input:checked + .checkbox-svg polyline {
+  stroke-dashoffset: 0;
+  stroke: #4285f4;
+}

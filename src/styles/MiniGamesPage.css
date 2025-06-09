@@ -1,0 +1,26 @@
+.minigamepage-page {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .minigamepage-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  
+  .minigamepage-card {
+    background: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .minigamepage-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  

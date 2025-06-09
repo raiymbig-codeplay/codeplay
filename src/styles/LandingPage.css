@@ -1,0 +1,277 @@
+.landing-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f68b1e;
+}
+
+.hero-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.cta-button {
+    background-color: #f68b1e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #d97706;
+}
+
+.section {
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.section h2 {
+    font-size: 2rem;
+}
+
+.section p {
+    max-width: 600px;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.section {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 50px;
+  }
+  
+  .section:nth-child(even) {
+    background: #e5e7eb; 
+  }
+  
+  /* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e293b, #111827);
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background: #facc15;
+    color: black;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #eab308;
+    transform: scale(1.05);
+  }
+  
+  /* Общий стиль для секций */
+  .section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 50px;
+  }
+  
+  .section:nth-child(even) {
+    background: #e5e7eb;
+  }
+  
+  /* Footer */
+  .footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .editor-container {
+    text-align: center;
+    padding: 50px;
+    background: #f9f9f9;
+  }
+  
+  .code-editor-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Контейнер редактора */
+.code-editor-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Панель инструментов */
+  .editor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .select-run-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .language-select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .run-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .run-button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Вывод результата */
+  .output-container {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    white-space: pre-wrap;
+  }
+  
+  .cm-editor {
+    text-align: left !important;
+  }
+  
+  .cm-content {
+    padding-left: 10px !important; 
+    text-align: left !important;
+  }
+  

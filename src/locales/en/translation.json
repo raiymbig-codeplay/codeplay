@@ -1,0 +1,125 @@
+{
+    "welcome": "Welcome to CodePlay!",
+    "start_course": "Start course",
+    "level": "Level",
+    "xp": "XP",
+    "tasks_solved": "Tasks solved",
+    "streak": "Streak",
+    "profile": "Profile",
+    "tasks": "tasks",
+    "minutes": "min",
+    "open": "Open",
+    "info": "Info",
+    "location": "Location",
+    "education": "Education",
+    "work": "Work",
+    "joined": "Joined",
+    "no_bio": "No bio provided yet. Edit your profile to add more information.",
+    "edit_profile": "Edit Profile",
+    "bio": "Biography",
+    "save_changes": "Save Changes",
+    "view_profile": "View Profile",
+    "profile_saved": "Changes saved!",
+    "profile_save_error": "An error occurred while saving",
+    "name": "Name",
+    "levelShort": "Ур.",
+    "tasks_short": "Tasks",
+    "streak_short": "Streak",
+
+    "courseSection": {
+    "title": "Start your programming journey",
+    "description": "Learn the basics of Python, JavaScript, HTML, and C++ with step-by-step interactive courses. Earn XP for every lesson completed!",
+    "python": {
+      "title": "Python Basics",
+      "description": "Variables, loops, conditions, and functions — in an interactive form!"
+    },
+    "javascript": {
+      "title": "JavaScript Starter",
+      "description": "Events, functions, and browser dynamics — simple and fun!"
+    },
+    "html": {
+      "title": "HTML Builder",
+      "description": "Learn web structure: tags, attributes, and forms!"
+    },
+    "cpp": {
+      "title": "C++ Core",
+      "description": "Understand how variables, pointers, and conditions work in C++!"
+    }
+  },
+  "challengeSection": {
+    "title": "Test your skills",
+    "description": "Solve interesting programming tasks and improve your skills.",
+    "python": "Solve a simple loop task.",
+    "javascript": "Work with arrays and conditions.",
+    "html": "Create a page structure with tags.",
+    "css": "Style elements using classes."
+  },
+  "gameSection": {
+  "title": "Learn through play",
+  "description": "Complete mini-games and quizzes to reinforce knowledge.",
+  "puzzle": "Code Puzzle",
+  "truefalse": "True/False Quiz",
+  "output": "Output Guessing"
+  },
+  "task_filter": "Task Filter",
+  "task_cards_title": "Challenge Cards",
+
+  "footer": {
+  "rights": "All rights reserved.",
+  "privacy": "Privacy Policy",
+  "terms": "Terms of Service",
+  "contact": "Contact Us"
+  },
+
+  "navbar": {
+  "courses": "Courses",
+  "challenges": "Challenges",
+  "games": "Games",
+  "leaderboard": "Leaderboard"
+  },
+
+  "homeLeaderboard": {
+    "title": "Leaderboard"
+    },
+
+    "courseProgress": {
+    "title": "Course Progress",
+    "tasks": "Tasks Completed",
+    "xp": "XP Earned"
+    },
+
+    "leaderboard": {
+      "title": "🏆 Leaderboard",
+      "user": "User",
+      "level": "Level",
+      "xp": "XP",
+      "solved": "Solved"
+    },
+
+    "courses": {
+    "title": "Interactive Courses",
+    "python": {
+      "title": "Python Basics",
+      "description": "Variables, loops, conditions, and functions — in an interactive form!"
+    },
+    "javascript": {
+      "title": "JavaScript Starter",
+      "description": "Events, functions, and browser dynamics — simple and fun!"
+    },
+    "html": {
+      "title": "HTML Builder",
+      "description": "Learn web structure: tags, attributes, and forms!"
+    },
+    "cpp": {
+      "title": "C++ Core",
+      "description": "Understand how variables, pointers, and conditions work in C++!"
+    }
+
+    },
+    "games": {
+      "title": "Mini Games"
+    }
+
+    
+}
+  

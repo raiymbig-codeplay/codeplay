@@ -1,0 +1,81 @@
+.task-sidebar {
+  width: 100%;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+  box-sizing: border-box;
+}
+
+.task-pack-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #3b82f6;
+  text-shadow: 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-radius: 6px;
+  transition: background 0.2s ease-in-out;
+}
+
+.task-item:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.task-item-label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e2e8f0;
+}
+
+.task-item-status {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.task-item-status.completed {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+}
+
+.task-item-status.not-started {
+  color: #f97316;
+  background-color: rgba(249, 115, 22, 0.15);
+  border: 1px solid #f97316;
+}
+
+.task-sidebar hr {
+  border: none;
+  height: 1px;
+  background-color: #334155;
+  margin: 10px 0;
+}
+
+/* Модалка */
+.modal-content {
+  position: relative;
+  background: #1e293b;
+  padding: 24px;
+  border-radius: 12px;
+  max-height: 90vh;
+  max-width: 500px;
+  width: 100%;
+  overflow-y: auto;
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.4);
+  box-sizing: border-box;
+}
+

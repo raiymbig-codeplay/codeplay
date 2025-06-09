@@ -1,0 +1,61 @@
+/* LearningPath.css */
+
+.learning-path {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .learning-path h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .step-card {
+    width: 250px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .step-number {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .step-card h3 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #007bff;
+  }
+  
+  .step-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }

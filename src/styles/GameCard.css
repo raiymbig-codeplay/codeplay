@@ -1,0 +1,73 @@
+.game-article-wrapper {
+    width: 240px;
+    height: 290px;
+    transition: 0.15s all ease-in-out;
+    border-radius: 12px;
+    padding: 5px;
+    border: 4px solid #0578c5;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .game-article-wrapper:hover {
+    box-shadow: 10px 10px 0 #4e84ff, 20px 20px 0 #4444bd;
+    border-color: #0578c5;
+    transform: translate(-20px, -20px);
+  }
+  
+  .game-article-wrapper:active {
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
+  
+  .game-container {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    background: gray;
+  }
+  
+  .game-info {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .game-title {
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+  }
+  
+  .game-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .game-hover {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    transition: all 0.3s ease;
+    background-color: #d8e4fc; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .game-hover svg {
+    stroke: #000;
+  }
+  
+  .game-article-wrapper:hover .game-hover {
+    transform: rotate(-45deg);
+    background-color: #a6c2f0;
+  }
+  

@@ -1,0 +1,69 @@
+.codeplay-profile-card {
+    width: 300px;
+    max-width: 100%;
+    background: #1b233d; 
+    padding: 20px;
+    margin-top: 80px; 
+    border: 2px solid #d4d4d4;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    gap: 12px;
+    box-sizing: border-box;
+    font-family: 'Menlo,Roboto Mono',monospace;
+    font-weight: 700;
+  }
+  
+  .codeplay-profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .codeplay-profile-stat {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 600;
+    color: #d4d4d4;
+  }
+  
+  .codeplay-progress-bar1 {
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #d4d4d4;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .codeplay-progress-fill1 {
+    height: 100%;
+    min-width: 4px; 
+    background: rgb(15, 172, 41);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .codeplay-profile-button {
+    margin-top: 12px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #d4d4d4;
+    background-color: #1b233d;
+    box-shadow: 4px 4px #d4d4d4;
+    font-size: 15px;
+    font-weight: 600;
+    color: #d4d4d4;
+    cursor: pointer;
+  }
+  
+  .codeplay-profile-button:active {
+    box-shadow: 0px 0px #d4d4d4;
+    transform: translate(3px, 3px);
+  }
+  

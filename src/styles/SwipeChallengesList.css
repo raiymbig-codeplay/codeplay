@@ -1,0 +1,184 @@
+/* Внешний контейнер */
+.challenges-wrapper {
+    position: relative; /* Чтобы позиционировать стрелки */
+    width: 100%;
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 40px auto; /* Центрируем */
+    padding: 20px 0;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Заголовок секции */
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  
+    /* Размеры и форма кнопки */
+    width: 30px;
+    height: 50px;
+    background: rgba(204, 204, 204, 0.8); /* Полупрозрачный серый */
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  
+    /* Для плавных анимаций */
+    transition: background 0.3s, opacity 0.3s;
+    opacity: 0.7;
+  
+    /* Располагаем внутренний «иконку» (через псевдоэлемент) по центру */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Псевдоэлемент с символом стрелки */
+  .arrow-button::before {
+    /* Стрелку можно указать юникодом, например:
+       \2190 (←), \2192 (→), \276E (❮), \276F (❯), \10094, \10095 и т.д. */
+    content: "";
+    color: #555;
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  /* При наведении делаем кнопку более заметной */
+  .arrow-button:hover {
+    background: rgba(187, 187, 187, 0.9);
+    opacity: 1;
+  }
+  
+  /* Кнопка слева (позиционирование) */
+  .arrow-button.left {
+    left: 10px;
+  }
+  
+  /* Кнопка справа (позиционирование) */
+  .arrow-button.right {
+    right: 10px;
+  }
+  
+  /* Иконка для левой стрелки */
+  .arrow-button.left::before {
+    content: "\276E"; /* ❮ (можешь заменить на \2190 для ←) */
+  }
+  
+  /* Иконка для правой стрелки */
+  .arrow-button.right::before {
+    content: "\276F"; /* ❯ (можешь заменить на \2192 для →) */
+  }
+
+  .arrow-button:focus,
+  .arrow-button:focus-visible {
+  outline: none;
+  box-shadow: none;
+  }
+  
+  /* Контейнер со списком (горизонтальный скролл) */
+  .challenges-container {
+    display: flex;           /* ДОБАВИТЬ! (чтобы карточки шли в линию) */
+    flex-direction: row;     /* Горизонтальная линия */
+    overflow-x: auto;        /* Чтобы была прокрутка */
+    gap: 20px;               /* Промежутки между карточками */
+    padding: 10px;
+    scroll-behavior: smooth;
+    white-space: nowrap;     /* НЕ ОБЯЗАТЕЛЬНО теперь, но можно оставить */
+    scrollbar-width: none;   /* Скрыть скроллбар Firefox */
+    -ms-overflow-style: none; /* Скрыть скроллбар IE/Edge */
+  }
+
+  .challenges-container::-webkit-scrollbar {
+  display: none; /* Скрыть скроллбар Chrome/Safari/Opera */
+}
+  
+  /* Карточки (одинаковый размер) */
+  .challenge-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+    color: white; /* текст на градиентном фоне */
+    cursor: pointer;
+    position: relative; /* чтобы позиционировать внутренние элементы */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    overflow: hidden;
+    text-align: left;
+    padding: 15px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+  }
+  .challenge-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Верхняя часть карточки */
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .challenge-icon {
+    font-size: 2rem; /* крупная иконка */
+  }
+  
+  .challenge-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  /* Нижняя часть карточки (счётчики) */
+  .card-info {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+  }
+  
+  .card-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .stat span {
+    font-size: 0.8rem;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .challenge-card {
+      width: 180px;
+      height: 160px;
+    }
+    .challenge-icon {
+      font-size: 1.5rem;
+    }
+    .stat p {
+      font-size: 1rem;
+    }
+  }
+  

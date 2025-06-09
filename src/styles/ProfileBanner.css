@@ -1,0 +1,80 @@
+.profile-header-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; 
+  max-height: 650px;          
+  margin: 2rem auto 0;        
+  background-color: #1e2030;  
+  border-radius: 16px;        
+  overflow: hidden;
+  border: 1px solid #375988;
+  font-family: 'Menlo,Roboto Mono',monospace;
+  font-weight: 700;
+}
+
+/* Баннер-фон */
+.profile-header-bg {
+  width: 100%;
+  height: 140px;              /* высота баннера */
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-edit-btn {
+  position: absolute;            
+  top: 220px;
+  right: 20px;
+  width: 100px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #4a3ef0;
+  color: #3b82f6;
+  border: 2px solid #375988;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.profile-edit-btn:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b82f65f;
+  color: #fff;
+}
+
+.profile-avatar-wrapper {
+  position: absolute;
+  top: 70px;                 /* смещение вниз из баннера */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 96px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ccc;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Блок с именем, логином и статистикой */
+.profile-user-info {
+  margin-top: 30px;           
+  padding: 0 1rem 1.5rem;
+  text-align: center;
+}
+
+.profile-name {
+  margin: 8px 0 4px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.profile-username {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}

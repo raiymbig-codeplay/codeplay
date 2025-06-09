@@ -1,0 +1,23 @@
+.hero-section {
+    min-height: 80vh; /* Почти на весь экран */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #0d1b2a; /* Темный фон (пример) */
+    color: #fff;
+    padding: 60px 20px;
+  }
+  
+  .cta-button {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  

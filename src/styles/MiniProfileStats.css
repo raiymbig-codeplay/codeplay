@@ -1,0 +1,74 @@
+.mini-profile {
+  display: flex;
+  align-items: center;
+  background-color: #1e293b;
+  border-radius: 6px;
+  padding: 6px 10px;
+  gap: 10px;
+  margin-right: 10px;
+  border: 1px solid #325192;
+}
+
+.mini-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mini-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mini-label {
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+}
+
+.mini-bar {
+  background: #444;
+  height: 6px;
+  width: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mini-fill {
+  background: linear-gradient(90deg, #00f5a0, #00d9f5);
+  height: 100%;
+}
+
+.mini-stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.mini-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.mini-col span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.clickable-avatar {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.clickable-avatar:hover {
+  transform: scale(1.05);
+}

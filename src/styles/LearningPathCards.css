@@ -1,0 +1,87 @@
+.learning-card {
+    position: relative;
+    width: 350px;
+    aspect-ratio: 16/9;
+    background-color: #f2f2f2;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #66666680;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .learning-icon-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .learning-icon-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: 0.5s;
+  }
+  
+  .learning-main-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    transition: 0.5s;
+  }
+  
+  .learning-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffffd0;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .learning-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #3f4246;
+    margin-bottom: 10px;
+  }
+  
+  .learning-card-description {
+    font-size: 0.9rem;
+    color: #838282;
+  }
+  
+  /* Hover effects */
+  .learning-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .learning-card:hover .learning-card-content {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  
+  .learning-card:hover .learning-main-img {
+    transform: scale(0);
+    opacity: 0;
+  }
+  

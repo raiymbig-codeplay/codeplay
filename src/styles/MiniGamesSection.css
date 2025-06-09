@@ -1,0 +1,62 @@
+  .mini-games-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .mini-games-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  
+  .mini-games-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .game-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .game-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #4f46e5;
+  }
+  
+  .game-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .start-game-btn {
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-game-btn:hover {
+    background-color: #4338ca;
+  }
+  
+  .mini-games-wrapper {
+    background-color: #FFFDF5; /* мягкий теплый фон */
+    padding: 60px 0;
+  }
+  

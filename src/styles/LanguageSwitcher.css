@@ -1,0 +1,14 @@
+.language-select {
+    padding: 4px 8px;
+    border-radius: 8px;
+    background: #1f1f1f;
+    color: white;
+    border: none;
+    margin-right: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .language-select:focus {
+    outline: none;
+  }
+  

@@ -1,0 +1,10 @@
+.courses-challenges-section {
+    background-color: #fff; /* Светлый фон для контраста */
+    color: #000;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .courses-challenges-section h2 {
+    margin-bottom: 20px;
+  }
+  

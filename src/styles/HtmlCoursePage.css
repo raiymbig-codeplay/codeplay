@@ -1,0 +1,163 @@
+/* src/styles/HtmlCoursePage.css */
+
+.html-course-container {
+    background: #0f172a;
+    color: #f1f5f9;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Заголовок и описание курса */
+  .html-course-container .html-header-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+  }
+  
+  .html-course-container .html-header-wrapper h1 {
+    font-size: 32px;
+    margin: 0 0 10px;
+    color: #f8fafc;
+    margin-top: 40px;
+  }
+  
+  .html-course-container .html-course-description {
+    font-size: 18px;
+    color: #94a3b8;
+    margin: 0;
+  }
+  
+  /* Общая обёртка для аккордеона и боковой панели */
+  .html-course-container .html-course-page-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+  
+  /* Левая колонка с аккордеоном */
+  .html-course-container .html-left-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Правая колонка с прогрессом */
+  .html-course-container .html-right-section {
+    flex: 1;
+  }
+  
+  /* Блок «тема» (accordion item) */
+  .html-course-container .html-accordion-item {
+    background: #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Заголовок темы (кнопка-аккордеон) */
+  .html-course-container .html-accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: #334155;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: #f1f5f9;
+    font-size: 18px;
+  }
+  
+  .html-course-container .html-accordion-header:hover {
+    background: #475569;
+  }
+  
+  .html-course-container .html-accordion-header .html-header-text {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  /* Иконка стрелочки */
+  .html-course-container .html-chevron-icon {
+    flex-shrink: 0;
+    color: #f1f5f9;
+    transition: transform 0.3s ease;
+    transform: rotate(-90deg);
+  }
+  
+  .html-course-container .html-chevron-icon.rotated {
+    transform: rotate(0deg);
+  }
+  
+  /* Скрытый список подтем */
+  .html-course-container .html-subtopic-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #1e293b;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Когда аккордеон открыт, делаем список видимым */
+  .html-course-container .html-subtopic-list.active {
+    max-height: 1000px; /* довольно большое значение, чтобы вместить все <li> */
+    opacity: 1;
+  }
+  
+  /* Каждый пункт списка подтем */
+  .html-course-container .html-subtopic-list li {
+    padding: 12px 20px;
+    border-top: 1px solid #334155;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+    color: #e2e8f0;
+    font-size: 16px;
+  }
+  
+  .html-course-container .html-subtopic-list li:hover {
+    background: #2e3a4b;
+  }
+  
+  /* Маркер «✓» у выполненной подтемы */
+  .html-course-container .html-subtask-status {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #94a3b8;
+  }
+  
+  .html-course-container .html-subtask-status.done {
+    color: #22c55e;
+  }
+  
+  /* Стили при фокусе (акцент) */
+  .html-course-container .html-accordion-header:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  }
+
+  .back-to-courses-btn {
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  .back-to-courses-btn:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  

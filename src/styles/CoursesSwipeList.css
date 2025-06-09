@@ -1,0 +1,167 @@
+.courses-wrapper {
+    position: relative; /* Чтобы позиционировать стрелки */
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px 0;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Заголовок секции */
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  /* Кнопки-стрелки */
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 30px;
+    height: 50px;
+    background: rgba(128, 128, 128, 0.5); /* полупрозрачный серый */
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow-button:hover {
+    background: rgba(128, 128, 128, 0.8);
+    opacity: 1;
+  }
+  
+  .arrow-button.left {
+    left: 10px;
+  }
+  
+  .arrow-button.right {
+    right: 10px;
+  }
+  
+  /* Если хочешь использовать псевдоэлементы для стрелок, можешь сделать так: */
+  .arrow-button::before {
+    content: "";
+    color: #555;
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  /* Левая стрелка */
+  .arrow-button.left::before {
+    content: "\276E"; /* ❮ */
+  }
+  
+  /* Правая стрелка */
+  .arrow-button.right::before {
+    content: "\276F"; /* ❯ */
+  }
+  
+  /* Контейнер для карточек */
+  .courses-container {
+  display: flex;           /* ДОБАВИТЬ! (чтобы карточки шли в линию) */
+  flex-direction: row;     /* Горизонтальная линия */
+  overflow-x: auto;        /* Чтобы была прокрутка */
+  gap: 20px;               /* Промежутки между карточками */
+  padding: 10px;
+  scroll-behavior: smooth;
+  white-space: nowrap;     /* НЕ ОБЯЗАТЕЛЬНО теперь, но можно оставить */
+  scrollbar-width: none;   /* Скрыть скроллбар Firefox */
+  -ms-overflow-style: none; /* Скрыть скроллбар IE/Edge */
+  }
+  
+  .courses-container::-webkit-scrollbar {
+  display: none; /* Скрыть скроллбар Chrome/Safari/Opera */
+}
+  
+  /* Карточки */
+  .course-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 250px;
+    margin-right: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+  }
+  .course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Верхняя часть карточки */
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .course-icon {
+    font-size: 2rem;
+  }
+  
+  .course-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  /* Нижняя часть (счётчики) */
+  .card-info {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+  }
+  
+  .card-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .stat span {
+    font-size: 0.8rem;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .course-card {
+      width: 180px;
+      height: 160px;
+    }
+    .course-icon {
+      font-size: 1.5rem;
+    }
+    .stat p {
+      font-size: 1rem;
+    }
+  }
+  

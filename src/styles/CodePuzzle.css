@@ -1,0 +1,111 @@
+/* Контейнер самого пазла внутри белой карточки */
+.code-puzzle {
+  width: 100%;
+}
+
+/* Заголовок задания */
+.code-puzzle h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #101025;
+}
+
+/* Список блоков с кодом */
+.code-puzzle ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.code-puzzle .code-line {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  cursor: grab;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #111827;
+  transition: background-color 0.2s;
+}
+
+.code-puzzle .code-line:hover {
+  background: #f3f4f6;
+}
+
+/* Кнопки «Проверить» / «Следующее задание» */
+.code-puzzle-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.code-puzzle-buttons button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.code-puzzle-buttons button:hover {
+  background-color: #2563eb;
+}
+
+/* Стили для toast-сообщений (optional) */
+.Toastify__toast--success {
+  background: #e8f9f0;
+  color: #2e7d32;
+}
+
+.Toastify__toast--error {
+  background: #fdecea;
+  color: #c62828;
+}
+
+.task-difficulty {
+  margin: 1rem 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pill {
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+}
+.pill.easy   { background: #4ade80; } /* зелёный */
+.pill.medium { background: #facc15; } /* жёлтый */
+.pill.hard   { background: #f87171; } /* красный */
+
+.task-check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+  animation: popIn 0.3s ease;
+}
+
+.task-check-icon .icon-svg {
+  width: 16px;
+  height: 16px;
+  stroke: white;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

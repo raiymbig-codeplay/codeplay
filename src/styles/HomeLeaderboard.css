@@ -1,0 +1,122 @@
+/* src/styles/HomeLeaderboard.css */
+.home-leaderboard {
+    font-family: 'Menlo,Roboto Mono',monospace;
+    width: 300px;
+    background: #0b172a;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 24px;                     
+    border-image: linear-gradient(135deg, #1a8dc2, #1245ec) 1;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  .home-leaderboard h2 {
+    font-family: 'Menlo,Roboto Mono',monospace;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0 0 20px;
+  }
+  
+  .hl-top3.centered {
+    display: flex;
+    justify-content: space-between;      
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .hl-card {
+    font-family: 'Menlo,Roboto Mono',monospace;
+    position: relative;
+    background: #16213e;
+    border-radius: 12px;
+    padding: 12px 8px 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hl-card.pos-1 {
+    width: 80px;
+    margin-top: -8px;
+    border: solid 3px #1245ec;
+  }
+  .hl-card.pos-2,
+  .hl-card.pos-3 {
+    width: 70px;
+    margin-top: 0;
+    border: solid 2px #22619b;
+  }
+  
+  .hl-medal {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+  }
+  
+  .hl-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    margin-bottom: 6px;
+  }
+  
+  .hl-name {
+    font-size: 0.78rem;
+    margin-bottom: 4px;
+    color: #3499ec;
+  }
+  .hl-xp {
+    font-size: 0.7rem;
+    opacity: 0.9;
+  }
+  
+  .hl-list {
+    font-family: 'Menlo,Roboto Mono',monospace;
+    background: #16213e;
+    border-radius: 12px;
+    padding: 8px 0;
+    border: solid 2px #22619b;
+  }
+  
+  .hl-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  
+  .hl-row:last-child {
+    border-bottom: none;
+  }
+  
+  .hl-rank {
+    width: 20px;
+    font-size: 0.75rem;
+  }
+  
+  .hl-avatar-sm {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 8px;
+  }
+  
+  .hl-user {
+    flex: 1;
+    font-size: 0.75rem;
+  }
+  
+  .hl-pts {
+    font-size: 0.72rem;
+    opacity: 0.85;
+  }
+  

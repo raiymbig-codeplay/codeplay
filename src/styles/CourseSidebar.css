@@ -1,0 +1,105 @@
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background-color: #0f172a;
+  color: white;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  outline: none;
+  border: solid 1px #2563eb;
+}
+
+.sidebar-container.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #1e293b;
+}
+
+.sidebar-header h2 {
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  outline: none;
+}
+
+.sidebar-toggle.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chapter {
+  border-top: 1px solid #334155;
+}
+
+.chapter h3 {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.challenge-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 24px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.challenge-name:hover {
+  background: #1e293b;
+}
+
+.status.completed {
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e;
+  border-radius: 50%;
+}
+
+.status.in-progress {
+  width: 10px;
+  height: 10px;
+  background-color: #facc15;
+  border-radius: 50%;
+}
+
+.status.locked {
+  width: 10px;
+  height: 10px;
+  background-color: #64748b;
+  border-radius: 50%;
+}

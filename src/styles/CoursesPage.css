@@ -1,0 +1,41 @@
+/* src/styles/CoursesPage.css */
+.courses-page {
+    padding: 40px;
+    background: #0f172a;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  .courses-page h1 {
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 40px;
+ /* Центровка по горизонтали */
+  }
+  
+  .courses-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .course-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
