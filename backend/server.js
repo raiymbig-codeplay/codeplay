@@ -39,16 +39,16 @@ dotenv.config();
       if (language === "python") {
         const filePath = path.join(tempDir, "code.py");
         fs.writeFileSync(filePath, code);
-        command = `chcp 65001 > nul && python "${filePath}"`;
+        command = `python3 "${filePath}"`;
       } else if (language === "cpp" || language === "c++") {
         const cppFile = path.join(tempDir, "code.cpp");
         const outputFile = path.join(tempDir, "code.exe");
         fs.writeFileSync(cppFile, code);
-        command = `chcp 65001 > nul && g++ "${cppFile}" -o "${outputFile}" && "${outputFile}"`;
+        command = `g++ "${cppFile}" -o "${outputFile}" && "${outputFile}"`;
       } else if (language === "javascript") {
         const jsFile = path.join(tempDir, "code.js");
         fs.writeFileSync(jsFile, code);
-        command = `chcp 65001 > nul && node "${jsFile}"`;
+        command = `node "${jsFile}"`;
       } else if (language === "html") {
         return res.json({ output: code });
       } else {
