@@ -33,7 +33,7 @@ export default function EditProfilePage() {
     const fetchData = async () => {
       try {
         const token = await currentUser.getIdToken(true);
-        const res = await axios.get('/api/users/profile', {
+        const res = await axios.get('https://codeplay-v8ci.onrender.com/api/users/profile', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData(res.data);
@@ -56,7 +56,7 @@ export default function EditProfilePage() {
     e.preventDefault();
     const token = await currentUser.getIdToken(true);
     try {
-      await axios.patch('/api/users/profile', userData, {
+      await axios.patch('https://codeplay-v8ci.onrender.com/api/users/profile', userData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success(t('profile_saved')); // ✅ сообщение об успешном сохранении

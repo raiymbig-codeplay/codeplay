@@ -17,7 +17,7 @@ export default function EditableAvatar({ avatarUrl, onUpload }) {
 
     try {
       const token = await auth.currentUser.getIdToken(true);
-      const res = await axios.post('/api/users/upload-avatar', formData, {
+      const res = await axios.post('https://codeplay-v8ci.onrender.com/api/users/upload-avatar', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

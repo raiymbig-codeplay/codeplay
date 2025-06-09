@@ -40,7 +40,7 @@ export default function CoursePage() {
   useEffect(() => {
     if (authLoading || !currentUser) return;
     currentUser.getIdToken().then(token => {
-      axios.get(`/api/progress/${currentUser.uid}`, {
+      axios.get(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(res => {

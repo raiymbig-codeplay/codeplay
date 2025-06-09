@@ -52,7 +52,7 @@ export default function SubtopicPage() {
   useEffect(() => {
     if (!currentUser) return;
     currentUser.getIdToken(true)
-      .then(token => axios.get(`/api/progress/${currentUser.uid}`, {
+      .then(token => axios.get(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
         headers: { Authorization: `Bearer ${token}` },
       }))
       .then(res => setUserProgress(res.data.completedTasks || []))
@@ -139,7 +139,7 @@ export default function SubtopicPage() {
           await fetchUserProfile(currentUser);
         }
 
-        const progRes = await axios.get(`/api/progress/${currentUser.uid}`, {
+        const progRes = await axios.get(`https://codeplay-v8ci.onrender.com/api/progress/${currentUser.uid}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUserProgress(progRes.data.completedTasks || []);

@@ -32,7 +32,7 @@ export function AuthProvider({ children }) {
     try {
       const idToken = await user.getIdToken();
 
-      const res = await axios.get("/api/users/profile", {
+      const res = await axios.get("https://codeplay-v8ci.onrender.com/api/users/profile", {
         headers: { Authorization: `Bearer ${idToken}` },
       });
 
@@ -41,14 +41,14 @@ export function AuthProvider({ children }) {
       if (err.response && err.response.status === 404) {
         try {
           await axios.post(
-            "/api/users/register",
+            "https://codeplay-v8ci.onrender.com/api/users/register",
             {},
             {
               headers: { Authorization: `Bearer ${await user.getIdToken()}` },
             }
           );
 
-          const res = await axios.get("/api/users/profile", {
+          const res = await axios.get("https://codeplay-v8ci.onrender.com/api/users/profile", {
             headers: { Authorization: `Bearer ${await user.getIdToken()}` },
           });
 
@@ -99,7 +99,7 @@ export function AuthProvider({ children }) {
     try {
       const token = await currentUser.getIdToken();
       await axios.post(
-        "/api/users/add-xp",
+        "https://codeplay-v8ci.onrender.com/api/users/add-xp",
         { xp: amount },
         { headers: { Authorization: `Bearer ${token}` } }
       );
