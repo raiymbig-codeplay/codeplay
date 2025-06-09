@@ -1,18 +1,12 @@
 // backend/config/firebase.js
 import admin from "firebase-admin";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname  = path.dirname(__filename);
+// Получаем JSON как строку из переменной окружения
+const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
 
-const serviceAccountPath = path.join(__dirname, "firebaseServiceAccount.json");
-const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, "utf-8"));
-
+// Инициализация Firebase Admin SDK
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
 export default admin;
-  
